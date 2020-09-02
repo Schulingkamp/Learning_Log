@@ -6,14 +6,14 @@
 
 {% block content %}
 	<p>
-		<a href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
+		<a style="color:#1E407C;" href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
 	</p>
 
 {% for entry in entries %}
 	<div class='card mb-3'>
 		<h4 class='card-header'>
 			{{ entry.date_added|date:'M d, Y H:i' }}
-			<small><a href="{% url 'learning_logs:edit_entry' entry.id %}">edit entry</a></small>
+			<small><a style="color:#1E407C;" href="{% url 'learning_logs:edit_entry' entry.id %}">edit entry</a></small>
 		</h4>
 		<div class='card-body'>
 			{{ entry.text|linebreaks }}
